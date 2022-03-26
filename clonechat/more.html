@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>jQuery DIV 표시</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+    //<!--
+        function viewDiv(idx)
+        {
+            if(idx == 1)
+            {
+                $(".div1").css("display","");
+                $(".div2").css("display","none");
+                $(".div3").css("display","none");
+            }
+            else if(idx == 2)
+            {
+                $(".div1").css("display","none");
+                $(".div2").css("display","");
+                $(".div3").css("display","none");
+            }
+            else if(idx == 3)
+            {
+                $(".div1").css("display","none");
+                $(".div2").css("display","none");
+                $(".div3").css("display","");
+            }
+            else
+            {
+                $(".div1").css("display","");
+                $(".div2").css("display","");
+                $(".div3").css("display","");
+            }
+        }
+    //-->
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<div>
+    <input type="button">
+    <input type="button" value="전체보기" onclick="viewDiv()"/><br/>
+    <input type="button" value="div1 상세보기" onclick="viewDiv(1)"/><br/>
+    <div class="div1" style="z-index:1;width:300px;height:30px;background-color:#111;">
+        <p style="z-index:1;color:#FFFFFF;font-weight:bold">DIV1</P>
+    </div>
+    <input type="button" value="div2 상세보기" onclick="viewDiv(2)"/><br/>
+    <div class="div2" style="z-index:2;width:300px;height:30px;background-color:#222;">
+        <p style="z-index:2;color:#FFFFFF;font-weight:bold">DIV2</P>
+    </div>
+    <input type="button" value="div3 상세보기" onclick="viewDiv(3)"/><br/>
+    <div class="div3" style="z-index:3;width:300px;height:30px;background-color:#333;">
+        <p style="z-index:3;color:#FFFFFF;font-weight:bold">DIV3</P>
+    </div>
+</div>
+</body>
+</html>
+
+출처: https://sevenerror.tistory.com/5 [푸른빛, Time Log]
